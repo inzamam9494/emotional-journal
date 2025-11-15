@@ -1,0 +1,29 @@
+{
+  "name": "emotional-journal-backend",
+  "version": "1.0.0",
+  "description": "Emotion Journal app where users can write how they feel, save their emotions, and view them later.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
+  },
+  "keywords": [
+    "javascript",
+    "backend",
+    "emotional"
+  ],
+  "author": "inzamam",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.19.3",
+    "prettier": "^3.6.2"
+  }
+}
