@@ -1,5 +1,7 @@
 // src/api.js
-export const API_URL = "http://localhost:8000/api/entries";
+// export const API_URL = "http://localhost:8000/api/entries";
+
+export const API_URL = "https://emotional-journal-5xs6.onrender.com/api/entries";
 
 export const addEntry = async (data) => {
   try {
