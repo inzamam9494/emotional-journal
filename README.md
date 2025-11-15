@@ -80,6 +80,14 @@ npm run dev
 - To deploy the project, I would use a monorepo setup so both frontend and backend stay organized in a single GitHub repository. The React frontend can be deployed easily on Vercel by connecting the repo and selecting the frontend folder. For the Node.js backend, I would use Render for hosting the API, though the free tier sleeps after 15 minutes—so I can pair it with a free uptime monitor to keep it active. Once deployed, I would update the frontend environment variables with the live backend API URL to ensure both services work together smoothly.
 ---
 
+## Live Deployment
+
+**Frontend:** https://emotional-journal-chi.vercel.app/
+
+**Backend:** https://emotional-journal-5xs6.onrender.com
+
+---
+
 ## Deployment
 
 ### Deploy Backend (Render)
@@ -90,13 +98,13 @@ cd backend
 # Go to https://render.com
 # Create a new Web Service → Connect your GitHub repo
 # Set Build Command:   npm install
-# Set Start Command:   node index.js  (or your main file)
+# Set Start Command:   npm start
 # Add Environment Variable:
 #   KEY: MONGODB_URI
 #   VALUE: <your-mongodb-url>
 
-# Deploy and copy your backend URL:
-# Example: https://your-backend.onrender.com
+# Deploy and copy your backend URL
+# deployed URL: https://emotional-journal-5xs6.onrender.com
 ```
 
 ### Deploy Frontend (Vercel)
@@ -108,16 +116,15 @@ vercel
 # ? Link to existing project → No
 # ? Which folder → ./ (current)
 # ? Build command → npm run build
-# ? Output dir → dist OR build (your React setup)
+# ? Output dir → dist
 
-# After deployment, Vercel will show your unique live URL.
-# Example: https://your-frontend.vercel.app
+# deployed URL: https://emotional-journal-chi.vercel.app/
 ```
 
 ### Update Frontend API URL
 Change `frontend/src/api.js`:
 ```javascript
-export const API_URL = "https://your-app-name.herokuapp.com/api/entries";
+export const API_URL = "https://emotional-journal-5xs6.onrender.com/api/entries";
 ```
 
 ---
